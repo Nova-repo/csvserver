@@ -3,6 +3,8 @@
 3. Map the the inputFile to the container and bind the host port 9393 to container port 9300. Set the env var CSVSERVER_BORDER && execute below command to run csvserver container from "inputFile" file available in the same directory. 
 
 #docker run -tid --name csvserver -p 9393:9300 -v $(pwd)/inputFile:/csvserver/inputdata infracloudio/csvserver:latest
+
+
 docker run -tid --name csvserver -e "CSVSERVER_BORDER=orange" -p 9393:9300 -v $(pwd)/inputFile:/csvserver/inputdata infracloudio/csvserver:latest
 
 
